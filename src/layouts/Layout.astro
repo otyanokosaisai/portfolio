@@ -1,0 +1,173 @@
+---
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "../globals.css";
+import CV from "@cv";
+import Analytics from '@vercel/analytics/astro';
+import BackgroundArt from "../components/BackgroundArt.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  keywords?: string[];
+}
+
+const {
+  title,
+  image = CV.basics.image,
+  canonicalURL = CV.basics.url,
+  keywords = [
+    "Sho Watanabe",
+    "Software Developer",
+    "Machine Learning",
+    "Reinforcement Learning",
+    "Rust Developer",
+    "High Performance Computing",
+    "Control Theory",
+    "University of Tokyo",
+    "Portfolio",
+    "Research",
+    "JAX",
+    "PyTorch",
+    "Rust",
+    "Python"
+  ]
+} = Astro.props;
+
+const { url, theme, name, location } = CV.basics;
+const { city, region, countryCode } = location;
+
+// Detailed SEO description generated from CV
+const detailedDescription =
+  `${name} — Software Developer & ML Researcher based in ${city}, ${region}. ` +
+  `Explore projects in high-performance Rust systems, reinforcement learning, evolutionary algorithms, and control theory.`;
+
+// Structured Data (Google SEO)
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": name,
+  "jobTitle": CV.basics.label,
+  "url": url,
+  "description": detailedDescription,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": city,
+    "addressRegion": region,
+    "addressCountry": countryCode
+  },
+  "affiliation": CV.education?.[0]?.institution ?? "University of Tokyo",
+  "knowsLanguage": CV.languages ?? [],
+  "knowsAbout": Object.values(CV.skills ?? {})
+    .flatMap(section => section.map(s => s.name)),
+  "worksFor": (CV.work ?? []).map(w => ({
+    "@type": "Organization",
+    "name": w.name,
+    "jobTitle": w.position
+  }))
+};
+
+// Breadcrumb for SEO
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": url
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": `${url}#projects`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "About",
+      "item": `${url}#about`
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={detailedDescription} />
+    <meta name="author" content={name} />
+    <meta name="keywords" content={keywords.join(", ")} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
+
+    <!-- Preload profile image -->
+    <link rel="preload" as="image" href={image} />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={detailedDescription} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={`${name}'s Portfolio`} />
+    <meta property="og:locale" content="en_JP" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={detailedDescription} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Additional Meta -->
+    <meta name="theme-color" content={theme === 'dark' ? '#111' : '#ffffff'} />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Structured Data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+    <Analytics />
+  </head>
+
+  <body data-theme={theme} class="relative bg-skin-fill font-sans">
+    <slot />
+    <script src="../scripts/main.ts"></script>
+    <BackgroundArt />
+  </body>
+</html>
+
+<style>
+  a { text-decoration: none; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; }
+
+  h1, h2, h3, h4 {
+    @apply text-skin-base font-sans;
+    margin: 0;
+  }
+
+  p {
+    @apply text-sm text-skin-muted;
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+</style>

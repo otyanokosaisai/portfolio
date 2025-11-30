@@ -1,0 +1,71 @@
+---
+import Section from "../Section.astro"
+import { skills } from "@cv"
+import { Icon } from "astro-icon/components"
+
+type SkillItem = {
+  name: string
+  level: string
+  icon?: string
+}
+
+type Skills = Record<
+  "languages" | "mlskills" | "tools" | "cloudinfra" | "engineering",
+  SkillItem[]
+>
+
+const skillsTyped = skills as Skills
+
+const categories = [
+  ["languages", "Languages"],
+  ["mlskills", "ML Skills"],
+  ["tools", "Tools"],
+  ["cloudinfra", "Cloud & Infra"],
+  ["engineering", "Software Engineering"],
+] as const
+---
+
+<Section className={Astro.props.className} title="Skills">
+  <div class="space-y-6">
+    {
+      categories.map(([key, label]) => {
+        const items = skillsTyped[key]
+
+        return (
+          <div class="space-y-2">
+            <h3 class="font-bold text-lg text-skin-base">{label}</h3>
+
+            <ul class="flex flex-wrap gap-3">
+              {
+                items.map(item => {
+                  const nameClass =
+                    item.level === "Advanced"
+                      ? "text-red-500 font-semibold"
+                      : "text-skin-base"
+
+                  return (
+                    <li
+                      class="
+                        flex items-center gap-2
+                        px-2 py-1
+                        rounded-md border border-skin-hue/20
+                        bg-skin-button-accent/20 text-xs
+                        transition-transform duration-200
+                        hover:scale-105 hover:-translate-y-0.5
+                      "
+                    >
+                      {item.icon && (
+                        <Icon name={item.icon} width={16} height={16} />
+                      )}
+                      <span class={nameClass}>{item.name}</span>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </div>
+        )
+      })
+    }
+  </div>
+</Section>

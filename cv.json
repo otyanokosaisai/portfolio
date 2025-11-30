@@ -1,0 +1,266 @@
+{
+  "basics": {
+    "name": "Sho Watanabe",
+    "label": "Software Engineer Student",
+    "animated_main_label": "developer",
+    "animated_secondary_initial_label": "software",
+    "animated_secondary_final_label": "backend",
+    "image": "/self_image.jpeg",
+    "email_to_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20=",
+    "url": "https://anmol.pro",
+    "summary": "Graduate student researcher and software engineer specialized in high-performance systems, reinforcement learning, control theory, and AI agents.",
+    "theme": "NewModern",
+    "location": {
+      "city": "Tokyo",
+      "countryCode": "JP",
+      "region": "Japan"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "icon": "mdi:github",
+        "color": "#929AAB",
+        "username": "otyanokosaisai",
+        "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2Sc"
+      },
+      {
+        "network": "Email",
+        "icon": "ri:mail-fill",
+        "color": "#D44638",
+        "username": "Email",
+        "url_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20="
+      },
+      {
+        "network": "LinkedIn",
+        "icon": "mdi:linkedin",
+        "color": "#0A66C2",
+        "username": "LinkedIn",
+        "url_enc": "nUE0pUZ6Yl93q3phoTyhn2IxnJ4hL29gY2yhY3Abol13LKEuozSvMF0jZQLlAwRmAGV="
+      }
+    ]
+  },
+  "languages": ["Japanese", "English"],
+  "url": "null",
+
+  "education": [
+    {
+      "institution": "The University of Tokyo",
+      "location": "Tokyo, Japan",
+      "startDate": "2021-04-01",
+      "endDate": "2025-03-31",
+      "studyType": "Bachelor of Engineering",
+      "area": "Mathematical Engineering and Information Physics",
+      "gpa": "3.79 / 4.3",
+      "summary": "Conducted research on online control of linear dynamical systems under uncertainty.",
+      "courses": [
+        "Analysis, Algebra, Probability",
+        "Optimization, Algorithms",
+        "Electromagnetism, Quantum Mechanics",
+        "Control Theory, Signal Processing",
+        "Computer Architecture"
+      ],
+      "url": "https://www.keisu.t.u-tokyo.ac.jp/en/"
+    },
+    {
+      "institution": "The University of Tokyo",
+      "location": "Tokyo, Japan",
+      "startDate": "2025-04-01",
+      "endDate": "2027-03-31",
+      "studyType": "Master of Information Science and Technology (expected)",
+      "area": "Information Physics and Computing",
+      "gpa": "A (Current)",
+      "summary": "Member of Computing Systems Research Laboratory.",
+      "url": "https://www.i.u-tokyo.ac.jp/index_e.shtml"
+    }
+  ],
+  "certificates": [
+  ],
+
+
+  "skills": {
+    "languages": [
+      { "name": "Rust", "level": "Advanced", "icon": "simple-icons:rust" },
+      { "name": "C++", "level": "Advanced", "icon": "simple-icons:cplusplus" },
+      { "name": "Python", "level": "Advanced", "icon": "simple-icons:python" },
+      { "name": "CUDA", "level": "Intermediate", "icon": "simple-icons:nvidia" },
+      { "name": "C", "level": "Intermediate", "icon": "simple-icons:c" },
+      { "name": "R", "level": "Intermediate", "icon": "simple-icons:r" }
+    ],
+
+    "mlskills": [
+      { "name": "JAX", "level": "Advanced", "icon": "mdi:lightning-bolt" },
+      { "name": "PyTorch", "level": "Advanced", "icon": "simple-icons:pytorch" },
+      { "name": "TensorRT", "level": "Intermediate", "icon": "simple-icons:nvidia" },
+      { "name": "NEAT", "level": "Advanced", "icon": "mdi:brain" },
+      { "name": "Reinforcement Learning", "level": "Advanced", "icon": "mdi:arm-flex" }
+    ],
+
+    "tools": [
+      { "name": "Linux (Arch)", "level": "Advanced", "icon": "simple-icons:linux" },
+      { "name": "Docker", "level": "Intermediate", "icon": "mdi:docker" },
+      { "name": "GitHub Actions", "level": "Advanced", "icon": "simple-icons:githubactions" },
+      { "name": "Make", "level": "Intermediate", "icon": "mdi:tools" },
+      { "name": "Ray", "level": "Advanced", "icon": "mdi:graph" }
+    ],
+
+    "cloudinfra": [
+      { "name": "AWS", "level": "Intermediate", "icon": "simple-icons:amazonaws" },
+      { "name": "Terraform", "level": "Intermediate", "icon": "simple-icons:terraform" },
+      { "name": "CI/CD Pipelines", "level": "Intermediate", "icon": "mdi:sync" }
+    ],
+
+    "engineering": [
+      { "name": "HPC / JAX XLA optimization", "level": "Advanced" },
+      { "name": "Distributed RL rollout system", "level": "Advanced" },
+      { "name": "High-performance systems design (Rust)", "level": "Advanced" },
+      { "name": "Performance optimization (JAX, TensorRT)", "level": "Advanced" },
+      { "name": "Cross-language integration (Rust ↔ Python FFI)", "level": "Advanced" },
+      { "name": "Distributed training pipelines (Ray)", "level": "Intermediate" },
+      { "name": "Research-oriented development", "level": "Advanced" },
+      { "name": "Rust/Python library on PyPI", "level": "Advanced" }
+    ]
+  },
+
+
+  "projects": [
+    {
+      "name": "DVSA-RL Simulator",
+      "isActive": true,
+      "description": "High-performance RL simulator written in Rust and JAX.",
+      "highlights": [
+        "Probabilistic dynamics",
+        "Sparse, dynamic action space",
+        "Rust + CUDA hybrid",
+        "Memory-efficient rollouts"
+      ],
+      "stack": {
+        "Rust": "simple-icons:rust",
+        "Python": "simple-icons:python",
+        "CUDA": "simple-icons:nvidia"
+      }
+    },
+    {
+      "name": "GraphEvol",
+      "isActive": true,
+      "description": "NEAT-inspired, optimization-agnostic topology evolution library.",
+      "highlights": [
+        "Rust + PyO3",
+        "Python API for JAX/NumPy/PyTorch",
+        "Automated PyPI builds"
+      ],
+      "stack": {
+        "Rust": "simple-icons:rust",
+        "Python": "simple-icons:python",
+        "PyO3": "simple-icons:python",
+        "maturin": "simple-icons:python"
+      },
+      "url_enc": "nUE0pUZ6Yl9jrKOcYz9lMl9jpz9dMJA0Y2qlLKObMKMioP8="
+    },
+    {
+      "name": "AI Steward",
+      "isActive": false,
+      "description": "LLM-powered multi-agent system with strict JSON-schema reasoning.",
+      "highlights": [
+        "Multi-agent LLM workflow",
+        "Tree of Thoughts multi-step refinement",
+        "Strict JSON-schema guided reasoning",
+        "Ollama backend local LLM"
+      ],
+      "stack": {
+        "Python": "simple-icons:python",
+        "Ollama": "mdi:robot"
+      },
+      "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY0SWYIA0MKqupzD="
+    },
+    {
+      "name": "Bachelor Thesis Simulator",
+      "isActive": false,
+      "description": "High-performance control theory simulator in Rust and JAX.",
+      "highlights": [
+        "Online control algorithm evaluation",
+        "Hybrid Rust–Python integration"
+      ],
+      "stack": {
+        "Rust": "simple-icons:rust",
+        "JAX": "mdi:lightning-bolt",
+        "Python": "simple-icons:python"
+      }
+    },
+    {
+      "name": "TravelerEye",
+      "isActive": false,
+      "description": "AI photo context rediscovery app using BLIP-2 + LLaMA2.",
+      "highlights": [
+        "TensorRT acceleration",
+        "Multimodal reasoning"
+      ],
+      "stack": {
+        "Python": "simple-icons:python",
+        "TensorRT": "simple-icons:nvidia"
+      },
+      "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY1ElLKMyoTIlEKyy"
+    },
+    {
+      "name": "ShogiAIEnv",
+      "isActive": false,
+      "description": "Reproducible, GPU-enabled Docker environment for running modern Shogi AI engines with a GUI.",
+      "highlights": [
+        "GPU-enabled Docker environment",
+        "Plug-and-play Shogi AI practice",
+        "User-friendly GUI setup"
+      ],
+      "stack": {
+        "Docker": "mdi:docker",
+        "Make": "mdi:tools"
+      },
+      "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY3yuozI1pzSCqIEyoaAipyWH"
+    }
+  ],
+
+  "awards": [
+    {
+      "title": "Department Chair’s Award for Excellence in Undergraduate Research",
+      "date": "2025",
+      "awarder": "The University of Tokyo"
+    },
+    {
+      "title": "NLP Competition – 1st Place",
+      "date": "2023",
+      "awarder": "Asahi Newspaper"
+    },
+    {
+      "title": "Object Detection – Silver Medal",
+      "date": "2025",
+      "awarder": "Signate"
+    },
+    {
+      "title": "Image Classification – Bronze Medal",
+      "date": "2024",
+      "awarder": "Signate"
+    }
+  ],
+
+  "work": [
+    {
+      "name": "Woven by Toyota",
+      "position": "Software Engineering Intern",
+      "location": "Tokyo, Japan",
+      "location_type": "On-site",
+      "url": "https://woven-city.global.toyota/",
+      "startDate": "2025-08-15",
+      "endDate": "2025-10-31",
+      "summary": "Developed multi-object tracking pipelines and deployed production ML systems.",
+      "responsibilities": [
+        "Multi-object tracking with Kalman smoother",
+        "AWS + Terraform deployment",
+        "Git-driven engineering workflow"
+      ],
+      "skills": {
+        "Python": "simple-icons:python",
+        "AWS": "simple-icons:amazonaws",
+        "Terraform": "simple-icons:terraform",
+        "Docker": "mdi:docker"
+      }
+    }
+  ]
+}

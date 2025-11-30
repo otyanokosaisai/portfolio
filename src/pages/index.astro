@@ -1,0 +1,95 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import Hero from "@/components/sections/Hero.astro";
+import About from "@/components/sections/About.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Education from "@/components/sections/Education.astro";
+
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import ThemeSwitch from "@/components/ThemeSwitch.astro";
+
+import { basics } from "@cv";
+const { name } = basics;
+
+const mainSections = [
+  Education,
+  Skills,
+  Projects,
+  Experience,
+];
+
+const printSections = [
+  Education,
+  Skills,
+  Experience,
+];
+---
+
+<Layout title={`${name} | Portfolio`}>
+  <main
+    class="relative grid h-full w-full max-w-7xl mx-auto justify-center gap-12 p-8 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24 text-skin-base print:gap-4"
+  >
+    <!-- Left side -->
+    <div
+      class="slide-enter space-y-6 ease-in md:col-span-2 print:grid print:grid-cols-5 print:space-y-0 md:sticky top-0 self-start h-min"
+    >
+      <Hero className="col-span-2" />
+      <About className="col-span-3" />
+      <ThemeSwitch />
+    </div>
+
+    <!-- Right side -->
+    <div class="slide-enter-content space-y-12 md:col-span-4 print:hidden">
+      {
+        mainSections.map((Section, i) => (
+          <Section className="print:hidden" style={`--enter-index:${i}`} />
+        ))
+      }
+    </div>
+
+    <!-- Print-only layout -->
+    <div class="hidden print:grid print:grid-cols-5 print:gap-2 print:space-y-0">
+      {
+        printSections.map((Section) => (
+          <Section className="print:col-span-full" />
+        ))
+      }
+    </div>
+  </main>
+
+  <KeyboardManager />
+</Layout>
+
+<style is:global>
+  * {
+    scrollbar-color: var(--color-button-muted) var(--color-fill);
+  }
+
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  /* Animation */
+  @keyframes slide-enter {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .slide-enter,
+    .slide-enter-content > * {
+      animation: slide-enter 0.8s both ease-out;
+      animation-delay: calc(var(--enter-index, 0) * 120ms);
+    }
+  }
+</style>

@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: 25, 36, 54;
+    --color-text-muted: 80, 96, 119;
+    --color-text-inverted: 255, 255, 255;
+    --color-fill: 240, 245, 255;
+    --muted: 200, 210, 0;
+    --color: 78, 166, 220;
+    --color-button-accent: 78, 166, 0;
+    --color-button-accent-hover: 50, 130, 200;
+    --color-button-muted: 190, 230, 245;
+    --color-nvim-blue: 80, 150, 230;
+    --color-nvim-green: 20, 180, 120;
+
+    [data-theme="sunset"] {
+      /* Sunset Gradient - Vibrant Pink-Orange Blend */
+      --color-text-base: 91, 33, 50;
+      --color-text-muted: 124, 58, 237;
+      --color-text-inverted: 255, 255, 255;
+      --color-fill: 255, 228, 230;
+      --muted: 251, 191, 36;
+      --color: 236, 72, 153;
+      --color-button-accent: 236, 72, 153;
+      --color-button-accent-hover: 219, 39, 119;
+      --color-button-muted: 254, 240, 138;
+      --color-nvim-blue: 147, 51, 234;
+      --color-nvim-green: 251, 146, 60;
+    }
+
+    [data-theme="new_modern"] {
+      --color-text-base: 25, 36, 54;
+      --color-text-muted: 80, 96, 119;
+      --color-text-inverted: 255, 255, 255;
+      --color-fill: 240, 245, 255;
+      --muted: 200, 210, 0;
+
+      --color: 78, 166, 220;
+      --color-button-accent: 78, 166, 0;
+      --color-button-accent-hover: 50, 130, 200;
+      --color-button-muted: 190, 230, 245;
+
+
+      --color-nvim-blue: 80, 150, 230;
+      --color-nvim-green: 20, 180, 120;
+    }
+  }
+
+  .dark {
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 150, 150, 150;
+    --color-text-inverted: 255, 255, 255;
+    --color-fill: 18, 18, 18;
+    --muted: 36, 36, 36;
+    --color: 227, 77, 10;
+    --color-button-accent: 227, 77, 10;
+    --color-button-accent-hover: 231, 121, 43;
+    --color-button-muted: 26, 26, 26;
+    --color-nvim-blue: 95, 175, 215;
+    --color-nvim-green: 135, 215, 135;
+
+    [data-theme="sunset"] {
+      /* Sunset Dark - Electric Twilight */
+      --color-text-base: 254, 240, 138;
+      --color-text-muted: 251, 146, 60;
+      --color-text-inverted: 91, 33, 50;
+      --color-fill: 15, 3, 18;
+      --muted: 91, 33, 50;
+      --color: 236, 72, 153;
+      --color-button-accent: 236, 72, 153;
+      --color-button-accent-hover: 219, 39, 119;
+      --color-button-muted: 55, 48, 163;
+      --color-nvim-blue: 147, 51, 234;
+      --color-nvim-green: 251, 146, 60;
+    }
+
+    [data-theme="new_modern"] {
+      --color-text-base: 230, 240, 255;
+      --color-text-muted: 140, 160, 180;
+      --color-text-inverted: 15, 20, 30;
+
+      --color-fill: 10, 16, 28;
+      --muted: 35, 45, 60;
+
+      --color: 78, 166, 220;
+      --color-button-accent: 78, 166, 220;
+      --color-button-accent-hover: 120, 200, 255;
+
+      --color-button-muted: 25, 35, 55;
+
+      --color-nvim-blue: 120, 180, 255;
+      --color-nvim-green: 40, 200, 140;
+    }
+  }
+
+  /* body {
+    @apply bg-nvim-bg text-nvim-fg font-mono select-none; */
+
+    /* .c-cursor {
+      position: fixed;
+      z-index: 999999999;
+      pointer-events: none;
+      border-radius: 200px;
+      @apply bg-skin-hue/20;
+    } */
+  /* } */
+
+  /* .modified-cursor-none {
+    cursor: auto !important;
+  } */
+  .hover-grad-text {
+    @apply text-center text-transparent bg-clip-text transition-all ease-in-out duration-700;
+    background-image: linear-gradient(
+            to right,
+            theme("colors.slate.950"),
+            theme("colors.slate.950") 33%,
+            theme("colors.red.500") 66%,
+            theme("colors.orange.400"),
+            theme("colors.yellow.500"),
+            theme("colors.blue.700"),
+            theme("colors.purple.500")
+    );
+    background-size: 300% 100%;
+    background-position: top left 100%;
+  }
+
+  @media screen and (min-width: 640px) {
+    .hover-grad-text {
+      background-position: top left;
+    }
+    .hover-grad-text:hover {
+      background-position: top left 100%;
+    }
+  }
+
+  .animate-marker {
+    animation: marker 4s ease-out infinite;
+  }
+
+  @keyframes marker {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    35% {
+      transform: translate(-50%, -50%) scale(6);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(6);
+      opacity: 0;
+    }
+  }
+
+  .scrollbar-thin::-webkit-scrollbar { height: 10px; }
+  .scrollbar-thumb-gray-800::-webkit-scrollbar-thumb { background-color: #a0aec0; border-radius: 4px; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #222;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #222;
+}
+ /* removed scrollbar
+html, body {
+  @apply scrollbar-hide;
+} */
+
+html, body, * {
+  cursor: auto !important;
+}
