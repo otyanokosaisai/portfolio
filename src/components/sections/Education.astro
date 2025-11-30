@@ -1,0 +1,96 @@
+---
+import Section from '../Section.astro'
+import { education } from '@cv'
+---
+
+<Section className={Astro.props.className} title="Education">
+  <ul class="space-y-8 py-3 print:space-y-4">
+
+    {
+      education.map((edu) => {
+        const start = edu.startDate ? new Date(edu.startDate) : null
+        const end = edu.endDate ? new Date(edu.endDate) : null
+
+        const startStr = start ? `${start.getFullYear()}` : ""
+        const endStr = end ? `${end.getFullYear()}` : "Present"
+
+        const years = startStr ? `${startStr} – ${endStr}` : ""
+        
+        return (
+          <li class="flex items-start gap-3">
+
+            {/* Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              class="hidden md:block print:hidden text-skin-hue mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+              <path d="M22 10v6" />
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+            </svg>
+
+            <div class="relative w-full">
+
+              {/* HEADER: location | institution | years */}
+              <div class="flex flex-wrap items-center gap-32 text-lg font-semibold text-skin-base">
+                {edu.location && <span>{edu.location}</span>}
+
+                {edu.url ? (
+                  <a
+                    href={edu.url}
+                    target="_blank"
+                    class="hover:text-skin-hue underline-offset-4 hover:underline transition-all"
+                  >
+                    {edu.institution}
+                  </a>
+                ) : (
+                  <span>{edu.institution}</span>
+                )}
+
+                {years && <span>{years}</span>}
+              </div>
+
+              {/* Divider */}
+              <div class="border-t border-skin-muted/40 my-2"></div>
+
+              {/* Degree / Area */}
+              <div class="text-sm text-skin-muted">
+                {edu.studyType}
+                {edu.area && ` — ${edu.area}`}
+              </div>
+
+              {/* GPA */}
+              {edu.gpa && (
+                <div class="text-xs text-skin-muted mt-0.5">GPA: {edu.gpa}</div>
+              )}
+
+              {/* Summary */}
+              {edu.summary && (
+                <p class="mt-2 text-sm leading-relaxed">{edu.summary}</p>
+              )}
+
+              {/* Courses */}
+              {(edu.courses?.length ?? 0) > 0 && (
+                <ul class="mt-2 ml-4 list-disc text-sm text-skin-muted space-y-1">
+                  {edu.courses?.map(course => (
+                    <li>{course}</li>
+                  ))}
+                </ul>
+              )}
+
+            </div>
+          </li>
+        )
+      })
+    }
+
+  </ul>
+</Section>
