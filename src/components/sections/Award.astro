@@ -1,0 +1,57 @@
+---
+import Section from "../Section.astro"
+import { awards } from "@cv"
+---
+
+<Section title="Awards" className={Astro.props.className}>
+  <div class="space-y-5">
+    {
+      awards.map((award) => (
+        <div
+          class="
+            border-l-4 border-skin-hue/40 pl-4 py-1
+            hover:border-skin-hue transition-colors duration-200
+            space-y-1
+          "
+        >
+
+          <div class="flex justify-between items-baseline">
+
+            {
+              award.url ? (
+                <a
+                  href={award.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-skin-base font-semibold text-md leading-tight underline decoration-skin-muted hover:text-skin-hue hover:decoration-skin-hue transition-colors"
+                >
+                  {award.title}
+                </a>
+              ) : (
+                <h3 class="text-skin-base font-semibold text-md leading-tight">
+                  {award.title}
+                </h3>
+              )
+            }
+
+            <span class="text-skin-muted text-sm whitespace-nowrap ml-4">
+              {award.date}
+            </span>
+          </div>
+
+          <p class="text-skin-muted text-sm">
+            {award.awarder}
+          </p>
+
+          {
+            award.details && (
+              <p class="text-skin-base/80 text-sm leading-snug">
+                {award.details}
+              </p>
+            )
+          }
+        </div>
+      ))
+    }
+  </div>
+</Section>
