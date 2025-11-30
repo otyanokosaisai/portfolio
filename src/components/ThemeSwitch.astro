@@ -128,7 +128,7 @@ import { Icon } from 'astro-icon/components'
   // Initialize data-theme based on stored value or default
   const storedDataTheme =
     localStorage.getItem('data-theme') ||
-    document.body.getAttribute('data-theme')!
+    document.body.getAttribute('data-theme') || "new_modern"
 
   updateDataTheme(storedDataTheme)
 
