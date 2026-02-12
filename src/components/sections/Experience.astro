@@ -14,7 +14,7 @@ type WorkItem = {
   endDate?: string;  // e.g. "Oct 2025" or undefined
   summary?: string | string[];
   achievements?: string[];
-  skills?: Record<string, string>;
+  skills?: Partial<Record<string, string>>;
 };
 
 const items: WorkItem[] = work;
