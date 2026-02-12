@@ -1,14 +1,13 @@
 {
   "basics": {
     "name": "Sho Watanabe",
-    "label": "Software Engineer Student",
-    "animated_main_label": "developer",
-    "animated_secondary_initial_label": "software",
-    "animated_secondary_final_label": "backend",
+    "label": "Master's student",
+    "animated_main_label": "graduate student",
+    "animated_secondary_initial_label": "",
     "image": "/self_image.jpeg",
     "email_to_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20=",
     "url": "https://portfolio-5nv.pages.dev/",
-    "summary": "Graduate student researcher and software engineer specialized in high-performance systems, reinforcement learning, control theory, and AI agents.",
+    "summary": "Master's student at University of Tokyo, Information Science and Technology. Focus on Machine Learning, Control Theory, Reinforcement Learning.",
     "theme": "new_modern",
     "location": {
       "city": "Tokyo",
@@ -44,7 +43,7 @@
 
   "education": [
     {
-      "institution": "The University of Tokyo",
+      "institution": "The University of Tokyo, Engineering",
       "location": "Tokyo, Japan",
       "startDate": "2021-04-01",
       "endDate": "2025-03-31",
@@ -62,12 +61,12 @@
       "url": "https://www.keisu.t.u-tokyo.ac.jp/en/"
     },
     {
-      "institution": "The University of Tokyo",
+      "institution": "Graduate school of Information Science and Technology, the University of Tokyo",
       "location": "Tokyo, Japan",
       "startDate": "2025-04-01",
       "endDate": "2027-03-31",
-      "studyType": "Master of Information Science and Technology (expected)",
-      "area": "Information Physics and Computing",
+      "studyType": "Master of Computer Science (Expected)",
+      "area": "Information Physics and Computing, Computing Systems",
       "gpa": "A (Current)",
       "summary": "Member of Computing Systems Research Laboratory.",
       "url": "https://www.i.u-tokyo.ac.jp/index_e.shtml"
@@ -274,6 +273,22 @@
         "AWS": "simple-icons:amazonaws",
         "Terraform": "simple-icons:terraform",
         "Docker": "mdi:docker"
+      }
+    },
+    {
+      "name": "Sakana AI",
+      "position": "Research and Development Intern",
+      "location": "Tokyo, Japan",
+      "location_type": "On-site",
+      "url": "https://sakana.ai/",
+      "startDate": "Feburary 2026",
+      "endDate": "March 2026",
+      "summary": "Ongoing",
+      "achievements": [
+        "Ongoing"
+      ],
+      "skills": {
+        "Python": "simple-icons:python"
       }
     }
   ]
