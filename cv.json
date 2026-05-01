@@ -279,16 +279,24 @@
       "name": "Sakana AI",
       "position": "Research and Development Intern",
       "location": "Tokyo, Japan",
-      "location_type": "On-site/Remote",
+      "location_type": "Hybrid",
       "url": "https://sakana.ai/",
-      "startDate": "Feburary 2026",
-      "endDate": "March 2026",
-      "summary": "Ongoing",
+      "startDate": "February 2026",
+      "endDate": "April 2026",
+      "summary": "Contributed to a confidential research-oriented development project on collaborative agentic systems, focusing on rigorous testing, iterative evaluation, and parallel knowledge accumulation.",
       "achievements": [
-        "Ongoing"
+        "Contributed to the development of collaborative agentic systems in a confidential research project.",
+        "Built and evaluated prototypes through rigorous testing and iterative experimentation.",
+        "Explored approaches for improving how multiple agents share and accumulate useful information.",
+        "Collaborated with researchers, engineers, and international interns through technical discussions and rapid prototyping."
       ],
       "skills": {
-        "Python": "simple-icons:python"
+        "Python": "simple-icons:python",
+        "LLMs": "carbon:machine-learning-model",
+        "Agentic Systems": "carbon:network-4",
+        "Multi-Agent Systems": "carbon:network-4",
+        "Research Prototyping": "carbon:development",
+        "Experimentation": "carbon:test-tool"
       }
     }
   ]
