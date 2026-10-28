@@ -16,7 +16,7 @@ const UI = {
     showLess: "Show less", present: "Present", aboutMe: "About me", socialMedia: "Social media",
     technologies: "Technologies used", otherLanguage: "日本語", otherLanguageLabel: "日本語で表示",
     portfolio: "Portfolio", skillLanguages: "Languages", skillML: "ML Skills", skillTools: "Tools",
-    skillCloud: "Cloud & Infra", skillEngineering: "Software Engineering", profileOf: "Profile of", sep: " - ", saveCV: "Save CV as PDF",
+    skillCloud: "Cloud & Infra", skillEngineering: "Software Engineering", profileOf: "Profile of", sep: " - ",
   },
   ja: {
     About: "自己紹介", Education: "学歴", Publications: "論文・発表", Skills: "スキル", Projects: "プロジェクト", Awards: "受賞・実績",
@@ -24,7 +24,7 @@ const UI = {
     showLess: "閉じる", present: "現在", aboutMe: "プロフィール", socialMedia: "連絡先・SNS",
     technologies: "使用技術", otherLanguage: "English", otherLanguageLabel: "View in English",
     portfolio: "ポートフォリオ", skillLanguages: "プログラミング言語", skillML: "機械学習", skillTools: "ツール",
-    skillCloud: "クラウド・インフラ", skillEngineering: "ソフトウェアエンジニアリング", profileOf: "プロフィール写真：", sep: "・", saveCV: "CV を PDF で保存",
+    skillCloud: "クラウド・インフラ", skillEngineering: "ソフトウェアエンジニアリング", profileOf: "プロフィール写真：", sep: "・",
   },
 } as const;
 

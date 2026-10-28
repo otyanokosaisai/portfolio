@@ -13,7 +13,6 @@ import Publications from "@/components/sections/Publications.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 import LangSwitch from "@/components/LangSwitch.astro";
-import PrintCV from "@/components/PrintCV.astro";
 import { cvFor, t } from "@/i18n";
 
 const { basics } = cvFor(Astro.currentLocale);
@@ -51,7 +50,6 @@ const printSections = [
         <ThemeSwitch />
         <LangSwitch />
       </div>
-      <PrintCV />
     </div>
 
     <!-- Right side -->
