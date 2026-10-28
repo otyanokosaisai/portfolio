@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import astroIcon from "astro-icon";
 import mdx from "@astrojs/mdx";
-import playformCompress from "@playform/compress";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
@@ -18,13 +17,6 @@ export default defineConfig({
       },
     }),
     sitemap(),
-    playformCompress({
-      CSS: false,
-      Image: false,
-      Action: {
-        Passed: async () => true,
-      },
-    }),
   ],
 
   output: "static",
