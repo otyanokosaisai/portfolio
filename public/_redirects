@@ -1,0 +1,3 @@
+# English lives at /, Japanese at /ja/: send /en and /en/... to the English page.
+/en    /         301
+/en/*  /:splat   301

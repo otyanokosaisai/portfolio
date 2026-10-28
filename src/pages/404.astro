@@ -1,0 +1,18 @@
+---
+// Not-found page. Cloudflare Pages serves it with status 404 for unknown paths
+// (without it, every unknown path returned the home page).
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="404 | Not found">
+  <main class="grid min-h-screen place-items-center p-8 text-skin-base">
+    <div class="space-y-4 text-center">
+      <p class="text-6xl font-bold text-skin-hue">404</p>
+      <p>Page not found. / ページが見つかりません。</p>
+      <p class="flex justify-center gap-6 text-sm">
+        <a href="/" class="underline underline-offset-4 hover:text-skin-hue">Home (English)</a>
+        <a href="/ja/" lang="ja" class="underline underline-offset-4 hover:text-skin-hue">トップ（日本語）</a>
+      </p>
+    </div>
+  </main>
+</Layout>
