@@ -5,7 +5,6 @@ import astroIcon from "astro-icon";
 import mdx from "@astrojs/mdx";
 import playformCompress from "@playform/compress";
 import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
   site: "https://sho-watanabe.dev",
@@ -31,7 +30,4 @@ export default defineConfig({
   ],
 
   output: "static",
-  adapter: vercel({
-    edgeMiddleware: false
-  }),
 });
