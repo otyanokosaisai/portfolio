@@ -7,7 +7,7 @@
     "image": "/self_image.jpeg",
     "email_to_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20=",
     "url": "https://portfolio-5nv.pages.dev/",
-    "summary": "東京大学大学院 情報理工学系研究科 修士課程に在籍し、機械学習・制御理論・強化学習を中心に研究している。",
+    "summary": "東京大学大学院 情報理工学系研究科 修士課程（中村高瀬研究室）。GPU を用いた高性能計算の研究に取り組んでいる。制御理論と機械学習を背景に、Rust・CUDA・JAX で高速なシステムを開発している。",
     "theme": "new_modern",
     "location": {
       "city": "東京",

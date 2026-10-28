@@ -7,7 +7,7 @@
     "image": "/self_image.jpeg",
     "email_to_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20=",
     "url": "https://portfolio-5nv.pages.dev/",
-    "summary": "Master's student at University of Tokyo, Information Science and Technology. Focus on Machine Learning, Control Theory, Reinforcement Learning.",
+    "summary": "Master's student at the University of Tokyo (Graduate School of Information Science and Technology, Nakamura–Takase Lab), working on GPU-based high-performance computing. With a background in control theory and machine learning, I build fast systems in Rust, CUDA and JAX.",
     "theme": "new_modern",
     "location": {
       "city": "Tokyo",
