@@ -40,16 +40,18 @@ const printSections = [
   <main
     class="relative grid h-full w-full max-w-7xl mx-auto justify-center gap-12 p-8 max-sm:py-16 md:p-16 lg:min-h-screen lg:grid-cols-6 xl:gap-24 text-skin-base print:gap-4"
   >
+    <!-- Language switch, top right -->
+    <div class="absolute right-8 top-6 md:right-16 md:top-8">
+      <LangSwitch />
+    </div>
+
     <!-- Left side -->
     <div
       class="slide-enter space-y-6 ease-in lg:col-span-2 print:grid print:grid-cols-5 print:space-y-0 lg:sticky top-0 self-start h-min"
     >
       <Hero className="col-span-2" />
       <About className="col-span-3" />
-      <div class="flex items-center gap-6 print:hidden">
-        <ThemeSwitch />
-        <LangSwitch />
-      </div>
+      <ThemeSwitch />
     </div>
 
     <!-- Right side -->

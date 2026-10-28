@@ -1,16 +1,30 @@
 ---
-// Link to the same page in the other language (English at /, Japanese at /ja/).
+// Language switch shown at the top right: both languages, the current one highlighted.
 import { localeOf, pathFor, t } from "@/i18n";
-const other = localeOf(Astro.currentLocale) === "ja" ? "en" : "ja";
+const current = localeOf(Astro.currentLocale);
+const items = [
+  { locale: "en", label: "EN" },
+  { locale: "ja", label: "日本語" },
+] as const;
 ---
 
-<a
-  href={pathFor(other)}
-  hreflang={other}
-  lang={other}
-  aria-label={t(Astro.currentLocale, "otherLanguageLabel")}
-  data-ccursor="lift"
-  class="text-sm font-semibold text-skin-hue underline-offset-4 hover:underline print:hidden"
->
-  {t(Astro.currentLocale, "otherLanguage")}
-</a>
+<nav aria-label={t(Astro.currentLocale, "language")} class="flex items-center gap-2 text-sm print:hidden">
+  {items.map(({ locale, label }, i) => (
+    <>
+      {i > 0 && <span aria-hidden="true" class="text-skin-muted">/</span>}
+      {locale === current ? (
+        <span aria-current="page" lang={locale} class="font-semibold text-skin-hue">{label}</span>
+      ) : (
+        <a
+          href={pathFor(locale)}
+          hreflang={locale}
+          lang={locale}
+          data-ccursor="lift"
+          class="text-skin-muted underline-offset-4 hover:text-skin-hue hover:underline"
+        >
+          {label}
+        </a>
+      )}
+    </>
+  ))}
+</nav>
