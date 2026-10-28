@@ -7,7 +7,7 @@ import playformCompress from "@playform/compress";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://sho-watanabe.dev",
+  site: "https://portfolio-5nv.pages.dev",
 
   integrations: [
     tailwind(),
