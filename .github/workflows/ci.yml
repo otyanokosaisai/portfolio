@@ -1,0 +1,38 @@
+# Build and audit on every push to main, every pull request and once a week.
+# Actions are pinned to commit SHAs (tag in the comment) so a moved tag cannot change what runs.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 1" # Mondays 09:00 JST: catch advisories published after the last push
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # pnpm version comes from packageManager in package.json
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install (lockfile only; build scripts per allowBuilds)
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check and build
+        run: pnpm run build
+
+      - name: Audit dependencies
+        run: pnpm audit
