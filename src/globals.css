@@ -163,22 +163,3 @@ html, body, * {
   cursor: auto !important;
 }
 
-/* Printing ("Save CV as PDF"): light colours on white paper whatever the screen theme,
-   no entrance animation, and the collapsed parts of Experience shown in full. */
-@media print {
-  html, html.dark, html [data-theme], html.dark [data-theme] {
-    --color-text-base: 25, 36, 54;
-    --color-text-muted: 80, 96, 119;
-    --color-text-inverted: 255, 255, 255;
-    --color-fill: 255, 255, 255;
-    --muted: 200, 210, 0;
-    --color: 78, 166, 220;
-    --color-button-accent: 78, 166, 0;
-    --color-button-accent-hover: 50, 130, 200;
-    --color-button-muted: 190, 230, 245;
-  }
-  html, body { background: #fff !important; }
-  .slide-enter, .slide-enter-content > * { animation: none !important; opacity: 1 !important; transform: none !important; }
-  .expand-container .overflow-hidden { height: auto !important; }
-  .expand-container .overflow-hidden::after { display: none !important; }
-}
