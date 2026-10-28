@@ -15,12 +15,16 @@ const UI = {
     Experience: "Experience", Summary: "Summary", Achievements: "Achievements", showMore: "Show more",
     showLess: "Show less", present: "Present", aboutMe: "About me", socialMedia: "Social media",
     technologies: "Technologies used", otherLanguage: "日本語", otherLanguageLabel: "日本語で表示",
+    portfolio: "Portfolio", skillLanguages: "Languages", skillML: "ML Skills", skillTools: "Tools",
+    skillCloud: "Cloud & Infra", skillEngineering: "Software Engineering", profileOf: "Profile of", sep: " - ",
   },
   ja: {
-    About: "概要", Education: "学歴", Skills: "スキル", Projects: "プロジェクト", Awards: "受賞",
-    Experience: "職歴", Summary: "概要", Achievements: "取り組み", showMore: "もっと見る",
-    showLess: "閉じる", present: "現在", aboutMe: "自己紹介", socialMedia: "SNS",
+    About: "自己紹介", Education: "学歴", Skills: "スキル", Projects: "プロジェクト", Awards: "受賞・実績",
+    Experience: "実務経験", Summary: "概要", Achievements: "主な取り組み", showMore: "もっと見る",
+    showLess: "閉じる", present: "現在", aboutMe: "プロフィール", socialMedia: "連絡先・SNS",
     technologies: "使用技術", otherLanguage: "English", otherLanguageLabel: "View in English",
+    portfolio: "ポートフォリオ", skillLanguages: "プログラミング言語", skillML: "機械学習", skillTools: "ツール",
+    skillCloud: "クラウド・インフラ", skillEngineering: "ソフトウェアエンジニアリング", profileOf: "プロフィール写真：", sep: "・",
   },
 } as const;
 

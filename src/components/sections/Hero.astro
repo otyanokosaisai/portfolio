@@ -23,7 +23,7 @@ const { city, region } = location
             height={600}
             width={600}
             src={image}
-            alt={`Profile of ${name}`}
+            alt={`${t(Astro.currentLocale, "profileOf")} ${name}`}
             loading='eager'
           />
         </figure>
@@ -44,7 +44,7 @@ const { city, region } = location
 
       <div data-ccursor="noPadding" class='flex w-max gap-2 py-1 px-2 text-sm text-skin-muted'>
         <Icon class='print:hidden sm:group-hover:text-skin-hue' name='mdi:world' width={20} height={20} />
-        {city}, {region}
+        {Astro.currentLocale === "ja" ? `${region}・${city}` : `${city}, ${region}`}
       </div>
     </section>
   </div>

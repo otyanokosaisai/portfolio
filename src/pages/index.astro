@@ -12,7 +12,7 @@ import Education from "@/components/sections/Education.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 import LangSwitch from "@/components/LangSwitch.astro";
-import { cvFor } from "@/i18n";
+import { cvFor, t } from "@/i18n";
 
 const { basics } = cvFor(Astro.currentLocale);
 const { name } = basics;
@@ -33,7 +33,7 @@ const printSections = [
 ];
 ---
 
-<Layout title={`${name} | Portfolio`}>
+<Layout title={`${name} | ${t(Astro.currentLocale, "portfolio")}`}>
   <main
     class="relative grid h-full w-full max-w-7xl mx-auto justify-center gap-12 p-8 max-sm:py-16 md:p-16 lg:min-h-screen lg:grid-cols-6 xl:gap-24 text-skin-base print:gap-4"
   >

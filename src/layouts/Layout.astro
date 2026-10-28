@@ -45,7 +45,7 @@ const { city, region, countryCode } = location;
 
 // Detailed SEO description generated from CV
 const detailedDescription = locale === "ja"
-  ? `${name}（${region}・${city}）のポートフォリオ。高性能な Rust システム、強化学習、進化計算、制御理論に関するプロジェクトを紹介しています。`
+  ? `${city}を拠点とするソフトウェア開発者・機械学習研究者、${name}のポートフォリオ。高性能な Rust システム、強化学習、進化計算、制御理論に関するプロジェクトを紹介しています。`
   : `${name} — Software Developer & ML Researcher based in ${city}, ${region}. ` +
     `Explore projects in high-performance Rust systems, reinforcement learning, evolutionary algorithms, and control theory.`;
 
@@ -54,6 +54,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": name,
+  "alternateName": locale === "ja" ? cvFor("en").basics.name : cvFor("ja").basics.name,
   "jobTitle": CV.basics.label,
   "url": url,
   "description": detailedDescription,
@@ -134,7 +135,7 @@ const breadcrumbSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={detailedDescription} />
     <meta property="og:image" content={image} />
-    <meta property="og:site_name" content={`${name}'s Portfolio`} />
+    <meta property="og:site_name" content={locale === "ja" ? `${name} ポートフォリオ` : `${name}'s Portfolio`} />
     <meta property="og:locale" content={locale === "ja" ? "ja_JP" : "en_US"} />
     <meta property="og:locale:alternate" content={locale === "ja" ? "en_US" : "ja_JP"} />
 

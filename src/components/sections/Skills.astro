@@ -18,11 +18,11 @@ type Skills = Record<
 const skillsTyped = skills as Skills
 
 const categories = [
-  ["languages", "Languages"],
-  ["mlskills", "ML Skills"],
-  ["tools", "Tools"],
-  ["cloudinfra", "Cloud & Infra"],
-  ["engineering", "Software Engineering"],
+  ["languages", t(Astro.currentLocale, "skillLanguages")],
+  ["mlskills", t(Astro.currentLocale, "skillML")],
+  ["tools", t(Astro.currentLocale, "skillTools")],
+  ["cloudinfra", t(Astro.currentLocale, "skillCloud")],
+  ["engineering", t(Astro.currentLocale, "skillEngineering")],
 ] as const
 ---
 
