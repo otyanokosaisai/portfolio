@@ -6,4 +6,3 @@ minimumReleaseAge: 1440
 ignoredBuiltDependencies:
   - esbuild
   - sharp
-  - workerd
