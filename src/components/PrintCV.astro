@@ -1,0 +1,19 @@
+---
+// Opens the browser's print dialog; the page has a print layout, so "Save as PDF" there gives a one-file CV.
+import { Icon } from "astro-icon/components";
+import { t } from "@/i18n";
+---
+
+<button
+  id="print-cv"
+  type="button"
+  data-ccursor="lift"
+  class="inline-flex items-center gap-1 text-sm font-semibold text-skin-hue underline-offset-4 hover:underline print:hidden"
+>
+  <Icon name="mdi:file-pdf-box" width={18} height={18} />
+  {t(Astro.currentLocale, "saveCV")}
+</button>
+
+<script>
+  document.getElementById("print-cv")?.addEventListener("click", () => window.print());
+</script>
