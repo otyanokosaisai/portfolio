@@ -28,7 +28,7 @@ export default defineConfig({
     csp: {
       directives: [
         "default-src 'self'",
-        "img-src 'self' data: https://cdn.simpleicons.org",
+        "img-src 'self' data:",
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",
