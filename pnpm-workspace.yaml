@@ -7,7 +7,3 @@ minimumReleaseAge: 1440
 allowBuilds:
   esbuild: false
   sharp: false
-
-# Patched versions of transitive dependencies with advisories.
-overrides:
-  "postcss-selector-parser@<6.1.5": "^6.1.5"
