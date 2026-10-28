@@ -361,9 +361,9 @@
     {
       "title": "画像分類コンペ 銅メダル",
       "date": "2024",
-      "awarder": "SIGNATE",
+      "awarder": "テクノプロ・デザイン社（日本舞踊の画像・動画解析チャレンジ、SIGNATE で開催）",
       "details": "ファインチューニングした ViT（EVA）を用い、参加者338名のコンペで銅メダル（F1: 0.9980）を獲得した。",
-      "url": "https://ailia.ai/contest/"
+      "url": "https://www.technoproholdings.com/news/detail.php?id=7768"
     },
     {
       "title": "AtCoder（競技プログラミング）",
