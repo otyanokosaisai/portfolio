@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "Sho Watanabe",
-    "label": "Master's student",
-    "animated_main_label": "graduate student",
+    "name": "渡邉 聖",
+    "label": "修士課程学生",
+    "animated_main_label": "大学院生",
     "animated_secondary_initial_label": "",
     "image": "/self_image.jpeg",
     "email_to_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20=",
     "url": "https://portfolio-5nv.pages.dev/",
-    "summary": "Master's student at University of Tokyo, Information Science and Technology. Focus on Machine Learning, Control Theory, Reinforcement Learning.",
+    "summary": "東京大学大学院 情報理工学系研究科 修士課程に在籍し、機械学習・制御理論・強化学習を中心に研究している。",
     "theme": "new_modern",
     "location": {
-      "city": "Tokyo",
+      "city": "東京",
       "countryCode": "JP",
-      "region": "Japan"
+      "region": "日本"
     },
     "profiles": [
       {
@@ -26,7 +26,7 @@
         "network": "Email",
         "icon": "ri:mail-fill",
         "color": "#D44638",
-        "username": "Email",
+        "username": "メール",
         "url_enc": "oJScoUEiBzSgLzIlZmNjZTElnKMypxOaoJScoP5wo20="
       },
       {
@@ -38,99 +38,192 @@
       }
     ]
   },
-  "languages": ["Japanese", "English"],
+  "languages": [
+    "日本語",
+    "英語"
+  ],
   "url": "https://portfolio-5nv.pages.dev/",
-
   "education": [
     {
-      "institution": "The University of Tokyo, Engineering",
-      "location": "Tokyo, Japan",
+      "institution": "東京大学 工学部",
+      "location": "東京",
       "startDate": "2021-04-01",
       "endDate": "2025-03-31",
-      "studyType": "Bachelor of Engineering",
-      "area": "Mathematical Engineering and Information Physics",
+      "studyType": "学士（工学）",
+      "area": "計数工学科",
       "gpa": "3.79 / 4.3",
-      "summary": "Conducted research on online control of linear dynamical systems under uncertainty.",
+      "summary": "不確実性を含む線形力学系のオンライン制御について研究した。",
       "courses": [
-        "Analysis, Algebra, Probability",
-        "Optimization, Algorithms",
-        "Electromagnetism, Quantum Mechanics",
-        "Control Theory, Signal Processing",
-        "Computer Architecture"
+        "解析学・代数学・確率論",
+        "最適化・アルゴリズム",
+        "電磁気学・量子力学",
+        "制御理論・信号処理",
+        "計算機アーキテクチャ"
       ],
-      "url": "https://www.keisu.t.u-tokyo.ac.jp/en/"
+      "url": "https://www.keisu.t.u-tokyo.ac.jp/"
     },
     {
-      "institution": "Graduate school of Information Science and Technology, the University of Tokyo",
-      "location": "Tokyo, Japan",
+      "institution": "東京大学大学院 情報理工学系研究科",
+      "location": "東京",
       "startDate": "2025-04-01",
       "endDate": "2027-03-31",
-      "studyType": "Master of Computer Science (Expected)",
-      "area": "Information Physics and Computing, Computing Systems",
-      "gpa": "A (Current)",
-      "summary": "Member of Computing Systems Research Laboratory.",
-      "url": "https://www.i.u-tokyo.ac.jp/index_e.shtml"
+      "studyType": "修士（情報理工学）取得見込み",
+      "area": "システム情報学専攻",
+      "gpa": "A（現時点）",
+      "summary": "中村高瀬研究室に所属している。",
+      "url": "https://www.i.u-tokyo.ac.jp/"
     }
   ],
-  "certificates": [
-  ],
-
-
+  "certificates": [],
   "skills": {
     "languages": [
-      { "name": "Rust", "level": "Advanced", "icon": "simple-icons:rust" },
-      { "name": "C++", "level": "Advanced", "icon": "simple-icons:cplusplus" },
-      { "name": "Python", "level": "Advanced", "icon": "simple-icons:python" },
-      { "name": "CUDA", "level": "Intermediate", "icon": "simple-icons:nvidia" },
-      { "name": "C", "level": "Intermediate", "icon": "simple-icons:c" },
-      { "name": "R", "level": "Intermediate", "icon": "simple-icons:r" }
+      {
+        "name": "Rust",
+        "level": "Advanced",
+        "icon": "simple-icons:rust"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "icon": "simple-icons:cplusplus"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "icon": "simple-icons:python"
+      },
+      {
+        "name": "CUDA",
+        "level": "Intermediate",
+        "icon": "simple-icons:nvidia"
+      },
+      {
+        "name": "C",
+        "level": "Intermediate",
+        "icon": "simple-icons:c"
+      },
+      {
+        "name": "R",
+        "level": "Intermediate",
+        "icon": "simple-icons:r"
+      }
     ],
-
     "mlskills": [
-      { "name": "JAX", "level": "Advanced", "icon": "mdi:lightning-bolt" },
-      { "name": "PyTorch", "level": "Advanced", "icon": "simple-icons:pytorch" },
-      { "name": "TensorRT", "level": "Intermediate", "icon": "simple-icons:nvidia" },
-      { "name": "NEAT", "level": "Advanced", "icon": "mdi:brain" },
-      { "name": "Reinforcement Learning", "level": "Advanced", "icon": "mdi:arm-flex" }
+      {
+        "name": "JAX",
+        "level": "Advanced",
+        "icon": "mdi:lightning-bolt"
+      },
+      {
+        "name": "PyTorch",
+        "level": "Advanced",
+        "icon": "simple-icons:pytorch"
+      },
+      {
+        "name": "TensorRT",
+        "level": "Intermediate",
+        "icon": "simple-icons:nvidia"
+      },
+      {
+        "name": "NEAT",
+        "level": "Advanced",
+        "icon": "mdi:brain"
+      },
+      {
+        "name": "強化学習",
+        "level": "Advanced",
+        "icon": "mdi:arm-flex"
+      }
     ],
-
     "tools": [
-      { "name": "Linux (Arch)", "level": "Advanced", "icon": "simple-icons:linux" },
-      { "name": "Docker", "level": "Intermediate", "icon": "mdi:docker" },
-      { "name": "GitHub Actions", "level": "Advanced", "icon": "simple-icons:githubactions" },
-      { "name": "Make", "level": "Intermediate", "icon": "mdi:tools" },
-      { "name": "Ray", "level": "Advanced", "icon": "mdi:graph" }
+      {
+        "name": "Linux (Arch)",
+        "level": "Advanced",
+        "icon": "simple-icons:linux"
+      },
+      {
+        "name": "Docker",
+        "level": "Intermediate",
+        "icon": "mdi:docker"
+      },
+      {
+        "name": "GitHub Actions",
+        "level": "Advanced",
+        "icon": "simple-icons:githubactions"
+      },
+      {
+        "name": "Make",
+        "level": "Intermediate",
+        "icon": "mdi:tools"
+      },
+      {
+        "name": "Ray",
+        "level": "Advanced",
+        "icon": "mdi:graph"
+      }
     ],
-
     "cloudinfra": [
-      { "name": "AWS", "level": "Intermediate", "icon": "simple-icons:amazonaws" },
-      { "name": "Terraform", "level": "Intermediate", "icon": "simple-icons:terraform" },
-      { "name": "CI/CD Pipelines", "level": "Intermediate", "icon": "mdi:sync" }
+      {
+        "name": "AWS",
+        "level": "Intermediate",
+        "icon": "simple-icons:amazonaws"
+      },
+      {
+        "name": "Terraform",
+        "level": "Intermediate",
+        "icon": "simple-icons:terraform"
+      },
+      {
+        "name": "CI/CD パイプライン",
+        "level": "Intermediate",
+        "icon": "mdi:sync"
+      }
     ],
-
     "engineering": [
-      { "name": "HPC / JAX XLA optimization", "level": "Advanced" },
-      { "name": "Distributed RL rollout system", "level": "Advanced" },
-      { "name": "High-performance systems design (Rust)", "level": "Advanced" },
-      { "name": "Performance optimization (JAX, TensorRT)", "level": "Advanced" },
-      { "name": "Cross-language integration (Rust ↔ Python FFI)", "level": "Advanced" },
-      { "name": "Distributed training pipelines (Ray)", "level": "Intermediate" },
-      { "name": "Research-oriented development", "level": "Advanced" },
-      { "name": "Rust/Python library on PyPI", "level": "Advanced" }
+      {
+        "name": "HPC・JAX（XLA）の最適化",
+        "level": "Advanced"
+      },
+      {
+        "name": "分散強化学習のロールアウト基盤",
+        "level": "Advanced"
+      },
+      {
+        "name": "高性能システムの設計（Rust）",
+        "level": "Advanced"
+      },
+      {
+        "name": "性能最適化（JAX・TensorRT）",
+        "level": "Advanced"
+      },
+      {
+        "name": "言語間の連携（Rust ↔ Python FFI）",
+        "level": "Advanced"
+      },
+      {
+        "name": "分散学習パイプライン（Ray）",
+        "level": "Intermediate"
+      },
+      {
+        "name": "研究用ソフトウェアの開発",
+        "level": "Advanced"
+      },
+      {
+        "name": "Rust/Python ライブラリの PyPI 公開",
+        "level": "Advanced"
+      }
     ]
   },
-
-
   "projects": [
     {
       "name": "DVSA-RL Simulator",
       "isActive": true,
-      "description": "High-performance RL simulator written in Rust and JAX.",
+      "description": "Rust と JAX で実装した高性能な強化学習シミュレータ。",
       "highlights": [
-        "Probabilistic dynamics",
-        "Sparse, dynamic action space",
-        "Rust + CUDA hybrid",
-        "Memory-efficient rollouts"
+        "確率的なダイナミクス",
+        "疎で動的な行動空間",
+        "Rust と CUDA のハイブリッド構成",
+        "メモリ効率の高いロールアウト"
       ],
       "stack": {
         "Rust": "simple-icons:rust",
@@ -141,11 +234,11 @@
     {
       "name": "GraphEvol",
       "isActive": true,
-      "description": "NEAT-inspired, optimization-agnostic topology evolution library.",
+      "description": "NEAT に着想を得た、最適化手法に依存しないトポロジー進化ライブラリ。",
       "highlights": [
         "Rust + PyO3",
-        "Python API for JAX/NumPy/PyTorch",
-        "Automated PyPI builds"
+        "JAX・NumPy・PyTorch 向けの Python API",
+        "PyPI 向けビルドの自動化"
       ],
       "stack": {
         "Rust": "simple-icons:rust",
@@ -158,12 +251,12 @@
     {
       "name": "AI Steward",
       "isActive": false,
-      "description": "LLM-powered multi-agent system with strict JSON-schema reasoning.",
+      "description": "JSON スキーマで推論を厳密に制御する、LLM ベースのマルチエージェントシステム。",
       "highlights": [
-        "Multi-agent LLM workflow",
-        "Tree of Thoughts multi-step refinement",
-        "Strict JSON-schema guided reasoning",
-        "Ollama backend local LLM"
+        "マルチエージェントによる LLM ワークフロー",
+        "Tree of Thoughts による段階的な洗練",
+        "JSON スキーマに沿った厳密な推論",
+        "Ollama を使ったローカル LLM"
       ],
       "stack": {
         "Python": "simple-icons:python",
@@ -172,12 +265,12 @@
       "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY0SWYIA0MKqupzD="
     },
     {
-      "name": "Bachelor Thesis Simulator",
+      "name": "卒業研究用シミュレータ",
       "isActive": false,
-      "description": "High-performance control theory simulator in Rust and JAX.",
+      "description": "Rust と JAX で実装した、制御理論研究向けの高性能シミュレータ。",
       "highlights": [
-        "Online control algorithm evaluation",
-        "Hybrid Rust–Python integration"
+        "オンライン制御アルゴリズムの評価",
+        "Rust と Python のハイブリッド構成"
       ],
       "stack": {
         "Rust": "simple-icons:rust",
@@ -188,10 +281,10 @@
     {
       "name": "TravelerEye",
       "isActive": false,
-      "description": "AI photo context rediscovery app using BLIP-2 + LLaMA2.",
+      "description": "BLIP-2 と Llama 2 を用いて、写真にまつわる文脈を再発見する AI アプリ。",
       "highlights": [
-        "TensorRT acceleration",
-        "Multimodal reasoning"
+        "TensorRT による高速化",
+        "マルチモーダル推論"
       ],
       "stack": {
         "Python": "simple-icons:python",
@@ -202,11 +295,11 @@
     {
       "name": "ShogiAIEnv",
       "isActive": false,
-      "description": "Reproducible, GPU-enabled Docker environment for running modern Shogi AI engines with a GUI.",
+      "description": "近年の将棋エンジンを GUI 付きで動かせる、再現性のある GPU 対応 Docker 環境。",
       "highlights": [
-        "GPU-enabled Docker environment",
-        "Plug-and-play Shogi AI practice",
-        "User-friendly GUI setup"
+        "GPU 対応の Docker 環境",
+        "将棋 AI を相手にすぐ練習できる環境",
+        "GUI を手軽にセットアップ可能"
       ],
       "stack": {
         "Docker": "mdi:docker",
@@ -215,58 +308,56 @@
       "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY3yuozI1pzSCqIEyoaAipyWH"
     }
   ],
-
   "awards": [
     {
-      "title": "Department Chair’s Award for Excellence in Undergraduate Research",
+      "title": "計数工学科長賞",
       "date": "2025",
-      "awarder": "The University of Tokyo",
-      "details": "Awarded for research in Control Theory and Online Machine Learning.",
+      "awarder": "東京大学",
+      "details": "制御理論とオンライン機械学習に関する卒業研究に対して授与された。",
       "url": "https://www.scl.ipc.i.u-tokyo.ac.jp/student_awards.html#:~:text=%E6%B8%A1%E9%82%89%20%E8%81%96%EF%BC%9A%202024%E5%B9%B4%E5%BA%A6%20%E8%A8%88%E6%95%B0%E5%B7%A5%E5%AD%A6%E7%A7%91%E9%95%B7%E8%B3%9E%EF%BC%8C2025"
     },
     {
-      "title": "NLP Competition – 1st Place",
+      "title": "NLP コンペ 1位",
       "date": "2023",
-      "awarder": "Asahi Newspaper",
-      "details": "Achieved 1st place out of 16 participants by combining fine-tuned RoBERTa and LightGBM to identify viral news articles using multimodal inputs including images, texts, and metadata.",
+      "awarder": "朝日新聞社",
+      "details": "画像・テキスト・メタデータを入力として話題になるニュース記事を予測するタスクで、ファインチューニングした RoBERTa と LightGBM を組み合わせ、参加者16名中1位となった。",
       "url": "https://note.com/asahi_ictrad/n/na86d75bd8fa9"
     },
     {
-      "title": "Object Detection – Silver Medal",
+      "title": "物体検出コンペ 銀メダル",
       "date": "2025",
-      "awarder": "Signate",
-      "details": "Earned a Silver Medal (0.983 mAP50-95) among 123 participants using YOLO11.",
+      "awarder": "SIGNATE",
+      "details": "YOLO11 を用い、参加者123名のコンペで銀メダル（mAP50-95: 0.983）を獲得した。",
       "url": "https://www.axell.co.jp/news/20250714.html"
     },
     {
-      "title": "Image Classification – Bronze Medal",
+      "title": "画像分類コンペ 銅メダル",
       "date": "2024",
-      "awarder": "Signate",
-      "details": "Achieved a Bronze Medal (0.9980 F1) among 338 participants using fine-tuned ViT (EVA).",
+      "awarder": "SIGNATE",
+      "details": "ファインチューニングした ViT（EVA）を用い、参加者338名のコンペで銅メダル（F1: 0.9980）を獲得した。",
       "url": "https://ailia.ai/contest/"
     },
     {
-      "title": "AtCoder Competitive Programming",
-      "date": "Ongoing",
+      "title": "AtCoder（競技プログラミング）",
+      "date": "継続中",
       "awarder": "AtCoder",
-      "details": "Green coder in weekly contests, using Rust and C++ to strengthen algorithmic thinking and implementation skills."
+      "details": "緑コーダー。毎週のコンテストに Rust と C++ で参加し、アルゴリズムの設計力と実装力を磨いている。"
     }
   ],
-
   "work": [
     {
       "name": "Woven by Toyota",
-      "position": "Software Engineering Intern",
-      "location": "Tokyo, Japan",
-      "location_type": "On-site",
+      "position": "ソフトウェアエンジニア（インターン）",
+      "location": "東京",
+      "location_type": "出社勤務",
       "url": "https://woven.toyota/en",
-      "startDate": "August 2025",
-      "endDate": "October 2025",
-      "summary": "Developed multi-object tracking pipelines and deployed production.",
+      "startDate": "2025年8月",
+      "endDate": "2025年10月",
+      "summary": "複数物体追跡のパイプラインを開発し、本番環境にデプロイした。",
       "achievements": [
-        "Multi-object tracking with Kalman smoother",
-        "AWS + Terraform deployment by automated CI/CD pipelines",
-        "Git-driven collaborative engineering workflow"
+        "カルマン平滑化を用いた複数物体追跡",
+        "Terraform と CI/CD パイプラインによる AWS への自動デプロイ",
+        "Git を中心としたチーム開発のワークフロー"
       ],
       "skills": {
         "Python": "simple-icons:python",
@@ -277,26 +368,26 @@
     },
     {
       "name": "Sakana AI",
-      "position": "Research and Development Intern",
-      "location": "Tokyo, Japan",
-      "location_type": "Hybrid",
+      "position": "研究開発（インターン）",
+      "location": "東京",
+      "location_type": "ハイブリッド勤務",
       "url": "https://sakana.ai/",
-      "startDate": "February 2026",
-      "endDate": "April 2026",
-      "summary": "Contributed to a confidential research-oriented development project on collaborative agentic systems, focusing on rigorous testing, iterative evaluation, and parallel knowledge accumulation.",
+      "startDate": "2026年2月",
+      "endDate": "2026年4月",
+      "summary": "協調型エージェントシステムに関する非公開の研究開発プロジェクトに携わり、厳密なテストと反復的な評価、複数エージェントによる並列的な知識蓄積に取り組んだ。",
       "achievements": [
-        "Contributed to the development of collaborative agentic systems in a confidential research project.",
-        "Built and evaluated prototypes through rigorous testing and iterative experimentation.",
-        "Explored approaches for improving how multiple agents share and accumulate useful information.",
-        "Collaborated with researchers, engineers, and international interns through technical discussions and rapid prototyping."
+        "非公開の研究プロジェクトで、協調型エージェントシステムの開発に貢献",
+        "厳密なテストと反復的な実験を通じて、プロトタイプを構築・評価",
+        "複数のエージェントが有用な情報を共有・蓄積するしくみの改善を検討",
+        "研究者・エンジニア・海外からのインターンと、技術的な議論や迅速なプロトタイピングを通じて協働"
       ],
       "skills": {
         "Python": "simple-icons:python",
-        "LLMs": "carbon:machine-learning-model",
-        "Agentic Systems": "carbon:network-4",
-        "Multi-Agent Systems": "carbon:network-4",
-        "Research Prototyping": "carbon:development",
-        "Experimentation": "carbon:test-tool"
+        "LLM": "carbon:machine-learning-model",
+        "エージェントシステム": "carbon:network-4",
+        "マルチエージェントシステム": "carbon:network-4",
+        "研究用プロトタイプ開発": "carbon:development",
+        "実験・評価": "carbon:test-tool"
       }
     }
   ]
