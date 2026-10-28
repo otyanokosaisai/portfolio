@@ -2,7 +2,6 @@
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "../globals.css";
 import CV from "@cv";
-import Analytics from '@vercel/analytics/astro';
 import BackgroundArt from "../components/BackgroundArt.astro";
 
 interface Props {
@@ -142,8 +141,6 @@ const breadcrumbSchema = {
     <!-- Structured Data -->
     <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-
-    <Analytics />
   </head>
 
   <body data-theme={theme} class="relative bg-skin-fill font-sans">
