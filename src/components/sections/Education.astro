@@ -39,8 +39,8 @@ import { education } from '@cv'
 
             <div class="relative w-full">
 
-              {/* HEADER: institution and years on one line, location below */}
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              {/* HEADER: institution, then years and location */}
+              <div>
                 {edu.url ? (
                   <a
                     href={edu.url}
@@ -53,9 +53,12 @@ import { education } from '@cv'
                   <span class="text-lg font-semibold text-skin-base">{edu.institution}</span>
                 )}
 
-                {years && <span class="text-sm text-skin-muted tabular-nums">{years}</span>}
               </div>
-              {edu.location && <div class="text-sm text-skin-muted">{edu.location}</div>}
+              {(years || edu.location) && (
+                <div class="mt-0.5 text-sm text-skin-muted tabular-nums">
+                  {[years, edu.location].filter(Boolean).join(" · ")}
+                </div>
+              )}
 
               {/* Divider */}
               <div class="border-t border-skin-muted/40 my-2"></div>
