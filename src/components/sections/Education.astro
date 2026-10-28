@@ -39,24 +39,23 @@ import { education } from '@cv'
 
             <div class="relative w-full">
 
-              {/* HEADER: location | institution | years */}
-              <div class="flex flex-wrap items-center gap-32 text-lg font-semibold text-skin-base">
-                {edu.location && <span>{edu.location}</span>}
-
+              {/* HEADER: institution and years on one line, location below */}
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 {edu.url ? (
                   <a
                     href={edu.url}
                     target="_blank"
-                    class="hover:text-skin-hue underline-offset-4 hover:underline transition-all"
+                    class="text-lg font-semibold text-skin-base hover:text-skin-hue underline-offset-4 hover:underline transition-all"
                   >
                     {edu.institution}
                   </a>
                 ) : (
-                  <span>{edu.institution}</span>
+                  <span class="text-lg font-semibold text-skin-base">{edu.institution}</span>
                 )}
 
-                {years && <span>{years}</span>}
+                {years && <span class="text-sm text-skin-muted tabular-nums">{years}</span>}
               </div>
+              {edu.location && <div class="text-sm text-skin-muted">{edu.location}</div>}
 
               {/* Divider */}
               <div class="border-t border-skin-muted/40 my-2"></div>
