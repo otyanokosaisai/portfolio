@@ -70,10 +70,7 @@ const { projects } = cvFor(Astro.currentLocale);
 </Section>
 
 <script>
-  import { Fancybox } from "@fancyapps/ui";
   import { deobf } from "@/utils/deobf";
-
-  Fancybox.bind('[data-fancybox="projects"]', { hideScrollbar: false });
 
   document.querySelectorAll(".project-card").forEach(card => {
     const enc = card.getAttribute("data-url-enc");
