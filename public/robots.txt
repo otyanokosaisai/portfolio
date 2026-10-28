@@ -1,0 +1,15 @@
+# Search engines may index the site.
+User-agent: *
+Allow: /
+
+# Crawlers that collect pages for AI model training.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: meta-externalagent
+Disallow: /
+
+Sitemap: https://portfolio-5nv.pages.dev/sitemap-index.xml
