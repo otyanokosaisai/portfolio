@@ -74,6 +74,34 @@
       "url": "https://www.i.u-tokyo.ac.jp/"
     }
   ],
+  "publications": [
+    {
+      "title": "Online Nonstochastic Networked Control under Adversarial Packet Losses",
+      "authors": [
+        "Sho Watanabe",
+        "Kaito Ito",
+        "Hideaki Ishii"
+      ],
+      "venue": "IFAC World Congress 2026（韓国・釜山）",
+      "year": "2026",
+      "type": "国際会議",
+      "status": "",
+      "url": ""
+    },
+    {
+      "title": "GPU Thread Mapping and Kernel Fusion for Matrix-Free Block-Sparse Operators in Nonlinear Model Predictive Control",
+      "authors": [
+        "Sho Watanabe",
+        "Hiroshi Nakamura",
+        "Hideki Takase"
+      ],
+      "venue": "情報処理学会 第259回 ARC・第207回 HPC 合同研究発表会",
+      "year": "2026",
+      "type": "国内研究会",
+      "status": "2026年12月 発表予定",
+      "url": ""
+    }
+  ],
   "certificates": [],
   "skills": {
     "languages": [

@@ -38,9 +38,11 @@
       }
     ]
   },
-  "languages": ["Japanese", "English"],
+  "languages": [
+    "Japanese",
+    "English"
+  ],
   "url": "https://portfolio-5nv.pages.dev/",
-
   "education": [
     {
       "institution": "The University of Tokyo, Engineering",
@@ -72,55 +74,174 @@
       "url": "https://www.i.u-tokyo.ac.jp/index_e.shtml"
     }
   ],
-  "certificates": [
+  "publications": [
+    {
+      "title": "Online Nonstochastic Networked Control under Adversarial Packet Losses",
+      "authors": [
+        "Sho Watanabe",
+        "Kaito Ito",
+        "Hideaki Ishii"
+      ],
+      "venue": "IFAC World Congress 2026, Busan, Korea",
+      "year": "2026",
+      "type": "International conference",
+      "status": "",
+      "url": ""
+    },
+    {
+      "title": "GPU Thread Mapping and Kernel Fusion for Matrix-Free Block-Sparse Operators in Nonlinear Model Predictive Control",
+      "authors": [
+        "Sho Watanabe",
+        "Hiroshi Nakamura",
+        "Hideki Takase"
+      ],
+      "venue": "IPSJ SIG Technical Report, 259th ARC / 207th HPC joint meeting",
+      "year": "2026",
+      "type": "Domestic workshop",
+      "status": "To appear, Dec. 2026",
+      "url": ""
+    }
   ],
-
-
+  "certificates": [],
   "skills": {
     "languages": [
-      { "name": "Rust", "level": "Advanced", "icon": "simple-icons:rust" },
-      { "name": "C++", "level": "Advanced", "icon": "simple-icons:cplusplus" },
-      { "name": "Python", "level": "Advanced", "icon": "simple-icons:python" },
-      { "name": "CUDA", "level": "Intermediate", "icon": "simple-icons:nvidia" },
-      { "name": "C", "level": "Intermediate", "icon": "simple-icons:c" },
-      { "name": "R", "level": "Intermediate", "icon": "simple-icons:r" }
+      {
+        "name": "Rust",
+        "level": "Advanced",
+        "icon": "simple-icons:rust"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "icon": "simple-icons:cplusplus"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "icon": "simple-icons:python"
+      },
+      {
+        "name": "CUDA",
+        "level": "Intermediate",
+        "icon": "simple-icons:nvidia"
+      },
+      {
+        "name": "C",
+        "level": "Intermediate",
+        "icon": "simple-icons:c"
+      },
+      {
+        "name": "R",
+        "level": "Intermediate",
+        "icon": "simple-icons:r"
+      }
     ],
-
     "mlskills": [
-      { "name": "JAX", "level": "Advanced", "icon": "mdi:lightning-bolt" },
-      { "name": "PyTorch", "level": "Advanced", "icon": "simple-icons:pytorch" },
-      { "name": "TensorRT", "level": "Intermediate", "icon": "simple-icons:nvidia" },
-      { "name": "NEAT", "level": "Advanced", "icon": "mdi:brain" },
-      { "name": "Reinforcement Learning", "level": "Advanced", "icon": "mdi:arm-flex" }
+      {
+        "name": "JAX",
+        "level": "Advanced",
+        "icon": "mdi:lightning-bolt"
+      },
+      {
+        "name": "PyTorch",
+        "level": "Advanced",
+        "icon": "simple-icons:pytorch"
+      },
+      {
+        "name": "TensorRT",
+        "level": "Intermediate",
+        "icon": "simple-icons:nvidia"
+      },
+      {
+        "name": "NEAT",
+        "level": "Advanced",
+        "icon": "mdi:brain"
+      },
+      {
+        "name": "Reinforcement Learning",
+        "level": "Advanced",
+        "icon": "mdi:arm-flex"
+      }
     ],
-
     "tools": [
-      { "name": "Linux (Arch)", "level": "Advanced", "icon": "simple-icons:linux" },
-      { "name": "Docker", "level": "Intermediate", "icon": "mdi:docker" },
-      { "name": "GitHub Actions", "level": "Advanced", "icon": "simple-icons:githubactions" },
-      { "name": "Make", "level": "Intermediate", "icon": "mdi:tools" },
-      { "name": "Ray", "level": "Advanced", "icon": "mdi:graph" }
+      {
+        "name": "Linux (Arch)",
+        "level": "Advanced",
+        "icon": "simple-icons:linux"
+      },
+      {
+        "name": "Docker",
+        "level": "Intermediate",
+        "icon": "mdi:docker"
+      },
+      {
+        "name": "GitHub Actions",
+        "level": "Advanced",
+        "icon": "simple-icons:githubactions"
+      },
+      {
+        "name": "Make",
+        "level": "Intermediate",
+        "icon": "mdi:tools"
+      },
+      {
+        "name": "Ray",
+        "level": "Advanced",
+        "icon": "mdi:graph"
+      }
     ],
-
     "cloudinfra": [
-      { "name": "AWS", "level": "Intermediate", "icon": "simple-icons:amazonaws" },
-      { "name": "Terraform", "level": "Intermediate", "icon": "simple-icons:terraform" },
-      { "name": "CI/CD Pipelines", "level": "Intermediate", "icon": "mdi:sync" }
+      {
+        "name": "AWS",
+        "level": "Intermediate",
+        "icon": "simple-icons:amazonaws"
+      },
+      {
+        "name": "Terraform",
+        "level": "Intermediate",
+        "icon": "simple-icons:terraform"
+      },
+      {
+        "name": "CI/CD Pipelines",
+        "level": "Intermediate",
+        "icon": "mdi:sync"
+      }
     ],
-
     "engineering": [
-      { "name": "HPC / JAX XLA optimization", "level": "Advanced" },
-      { "name": "Distributed RL rollout system", "level": "Advanced" },
-      { "name": "High-performance systems design (Rust)", "level": "Advanced" },
-      { "name": "Performance optimization (JAX, TensorRT)", "level": "Advanced" },
-      { "name": "Cross-language integration (Rust ↔ Python FFI)", "level": "Advanced" },
-      { "name": "Distributed training pipelines (Ray)", "level": "Intermediate" },
-      { "name": "Research-oriented development", "level": "Advanced" },
-      { "name": "Rust/Python library on PyPI", "level": "Advanced" }
+      {
+        "name": "HPC / JAX XLA optimization",
+        "level": "Advanced"
+      },
+      {
+        "name": "Distributed RL rollout system",
+        "level": "Advanced"
+      },
+      {
+        "name": "High-performance systems design (Rust)",
+        "level": "Advanced"
+      },
+      {
+        "name": "Performance optimization (JAX, TensorRT)",
+        "level": "Advanced"
+      },
+      {
+        "name": "Cross-language integration (Rust ↔ Python FFI)",
+        "level": "Advanced"
+      },
+      {
+        "name": "Distributed training pipelines (Ray)",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Research-oriented development",
+        "level": "Advanced"
+      },
+      {
+        "name": "Rust/Python library on PyPI",
+        "level": "Advanced"
+      }
     ]
   },
-
-
   "projects": [
     {
       "name": "DVSA-RL Simulator",
@@ -215,7 +336,6 @@
       "url_enc": "nUE0pUZ6Yl9anKEbqJVhL29gY290rJSho2gip2Scp2ScY3yuozI1pzSCqIEyoaAipyWH"
     }
   ],
-
   "awards": [
     {
       "title": "Department Chair’s Award for Excellence in Undergraduate Research",
@@ -252,7 +372,6 @@
       "details": "Green coder in weekly contests, using Rust and C++ to strengthen algorithmic thinking and implementation skills."
     }
   ],
-
   "work": [
     {
       "name": "Woven by Toyota",

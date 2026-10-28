@@ -11,7 +11,7 @@ export const pathFor = (locale: Locale) => (locale === "ja" ? "/ja/" : "/");
 
 const UI = {
   en: {
-    About: "About", Education: "Education", Skills: "Skills", Projects: "Projects", Awards: "Awards",
+    About: "About", Education: "Education", Publications: "Publications", Skills: "Skills", Projects: "Projects", Awards: "Awards",
     Experience: "Experience", Summary: "Summary", Achievements: "Achievements", showMore: "Show more",
     showLess: "Show less", present: "Present", aboutMe: "About me", socialMedia: "Social media",
     technologies: "Technologies used", otherLanguage: "日本語", otherLanguageLabel: "日本語で表示",
@@ -19,7 +19,7 @@ const UI = {
     skillCloud: "Cloud & Infra", skillEngineering: "Software Engineering", profileOf: "Profile of", sep: " - ",
   },
   ja: {
-    About: "自己紹介", Education: "学歴", Skills: "スキル", Projects: "プロジェクト", Awards: "受賞・実績",
+    About: "自己紹介", Education: "学歴", Publications: "論文・発表", Skills: "スキル", Projects: "プロジェクト", Awards: "受賞・実績",
     Experience: "実務経験", Summary: "概要", Achievements: "主な取り組み", showMore: "もっと見る",
     showLess: "閉じる", present: "現在", aboutMe: "プロフィール", socialMedia: "連絡先・SNS",
     technologies: "使用技術", otherLanguage: "English", otherLanguageLabel: "View in English",

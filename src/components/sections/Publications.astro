@@ -1,0 +1,49 @@
+---
+import Section from "../Section.astro"
+import { cvFor, t } from "@/i18n"
+const cv = cvFor(Astro.currentLocale)
+const { publications } = cv
+// The site owner's own name is set in bold in the author lists (authors keep the spelling used in the paper).
+const self = cvFor("en").basics.name
+---
+
+<Section title={t(Astro.currentLocale, "Publications")} className={Astro.props.className}>
+  <ol class="space-y-5">
+    {
+      publications.map((pub) => (
+        <li class="border-l-4 border-skin-hue/40 pl-4 py-1 hover:border-skin-hue transition-colors duration-200 space-y-1">
+          <div class="flex justify-between items-baseline gap-4">
+            {pub.url ? (
+              <a
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-skin-base font-semibold leading-snug underline decoration-skin-muted hover:text-skin-hue hover:decoration-skin-hue transition-colors"
+              >
+                {pub.title}
+              </a>
+            ) : (
+              <h4 class="text-skin-base font-semibold leading-snug">{pub.title}</h4>
+            )}
+            <span class="text-skin-muted text-sm whitespace-nowrap">{pub.year}</span>
+          </div>
+
+          <p class="text-sm text-skin-base/80">
+            {pub.authors.map((a, i) => (
+              <>{i > 0 && ", "}{a === self ? <strong class="font-semibold text-skin-base">{a}</strong> : a}</>
+            ))}
+          </p>
+
+          <p class="text-sm text-skin-muted">{pub.venue}</p>
+
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-md border border-skin-hue/20 bg-skin-button-accent/20">{pub.type}</span>
+            {pub.status && (
+              <span class="px-2 py-0.5 text-xs rounded-md border border-skin-hue/40 text-skin-hue">{pub.status}</span>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
