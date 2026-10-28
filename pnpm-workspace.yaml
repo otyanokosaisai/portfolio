@@ -2,7 +2,8 @@
 # hijacked releases are usually pulled within hours.
 minimumReleaseAge: 1440
 
-# Install scripts of these packages are not run.
-ignoredBuiltDependencies:
-  - esbuild
-  - sharp
+# Build scripts of dependencies run only when set to true here.
+# esbuild and sharp ship prebuilt binaries, so their scripts are not needed.
+allowBuilds:
+  esbuild: false
+  sharp: false
