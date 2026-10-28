@@ -35,6 +35,13 @@
         "color": "#0A66C2",
         "username": "LinkedIn",
         "url_enc": "nUE0pUZ6Yl93q3phoTyhn2IxnJ4hL29gY2yhY3Abol13LKEuozSvMF0jZQLlAwRmAGV="
+      },
+      {
+        "network": "ORCID",
+        "icon": "simple-icons:orcid",
+        "color": "#A6CE39",
+        "username": "0009-0001-2168-5374",
+        "url_enc": "nUE0pUZ6Yl9ipzAcMP5ipzpiZQNjBF0jZQNkYGVkAwtgAGZ3AN=="
       }
     ]
   },
