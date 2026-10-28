@@ -1,4 +1,5 @@
-# Build and audit on every push to main, every pull request and once a week.
+# Build and audit on every push to main and every pull request
+# (new advisories between pushes come from Dependabot alerts).
 # Actions are pinned to commit SHAs (tag in the comment) so a moved tag cannot change what runs.
 name: CI
 
@@ -6,8 +7,6 @@ on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    - cron: "0 0 * * 1" # Mondays 09:00 JST: catch advisories published after the last push
 
 permissions:
   contents: read
