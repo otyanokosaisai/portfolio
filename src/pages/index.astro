@@ -11,7 +11,10 @@ import Education from "@/components/sections/Education.astro";
 
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
-import { basics } from "@cv";
+import LangSwitch from "@/components/LangSwitch.astro";
+import { cvFor } from "@/i18n";
+
+const { basics } = cvFor(Astro.currentLocale);
 const { name } = basics;
 
 const mainSections = [
@@ -40,7 +43,10 @@ const printSections = [
     >
       <Hero className="col-span-2" />
       <About className="col-span-3" />
-      <ThemeSwitch />
+      <div class="flex items-center gap-6 print:hidden">
+        <ThemeSwitch />
+        <LangSwitch />
+      </div>
     </div>
 
     <!-- Right side -->

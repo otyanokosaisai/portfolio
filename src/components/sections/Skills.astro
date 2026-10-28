@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro"
-import { skills } from "@cv"
+import { cvFor, t } from "@/i18n"
+const { skills } = cvFor(Astro.currentLocale)
 import { Icon } from "astro-icon/components"
 
 type SkillItem = {
@@ -25,7 +26,7 @@ const categories = [
 ] as const
 ---
 
-<Section className={Astro.props.className} title="Skills">
+<Section className={Astro.props.className} title={t(Astro.currentLocale, "Skills")}>
   <div class="space-y-6">
     {
       categories.map(([key, label]) => {

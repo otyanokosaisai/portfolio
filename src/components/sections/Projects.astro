@@ -2,10 +2,11 @@
 import Section from "../Section.astro";
 import { Icon } from "astro-icon/components";
 
-import { projects } from "@cv";
+import { cvFor, t } from "@/i18n";
+const { projects } = cvFor(Astro.currentLocale);
 
 ---
-<Section className={Astro.props.className} title="Projects">
+<Section className={Astro.props.className} title={t(Astro.currentLocale, "Projects")}>
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects?.map(
@@ -42,7 +43,7 @@ import { projects } from "@cv";
               </ul>
 
               <!-- Stack Icons -->
-              <ul class="flex print:hidden flex-wrap gap-2 mt-4" aria-label="Technologies used">
+              <ul class="flex print:hidden flex-wrap gap-2 mt-4" aria-label={t(Astro.currentLocale, "technologies")}>
                 {stack &&
                   Object.entries(stack).map(([label, icon]) => (
                     <li

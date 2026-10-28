@@ -1,0 +1,16 @@
+---
+// Link to the same page in the other language (English at /, Japanese at /ja/).
+import { localeOf, pathFor, t } from "@/i18n";
+const other = localeOf(Astro.currentLocale) === "ja" ? "en" : "ja";
+---
+
+<a
+  href={pathFor(other)}
+  hreflang={other}
+  lang={other}
+  aria-label={t(Astro.currentLocale, "otherLanguageLabel")}
+  data-ccursor="lift"
+  class="text-sm font-semibold text-skin-hue underline-offset-4 hover:underline print:hidden"
+>
+  {t(Astro.currentLocale, "otherLanguage")}
+</a>

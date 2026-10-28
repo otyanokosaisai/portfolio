@@ -1,9 +1,10 @@
 ---
 import Section from "../Section.astro"
-import { awards } from "@cv"
+import { cvFor, t } from "@/i18n"
+const { awards } = cvFor(Astro.currentLocale)
 ---
 
-<Section title="Awards" className={Astro.props.className}>
+<Section title={t(Astro.currentLocale, "Awards")} className={Astro.props.className}>
   <div class="space-y-5">
     {
       awards.map((award) => (

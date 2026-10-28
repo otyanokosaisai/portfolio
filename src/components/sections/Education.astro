@@ -1,9 +1,10 @@
 ---
 import Section from '../Section.astro'
-import { education } from '@cv'
+import { cvFor, t } from '@/i18n'
+const { education } = cvFor(Astro.currentLocale)
 ---
 
-<Section className={Astro.props.className} title="Education">
+<Section className={Astro.props.className} title={t(Astro.currentLocale, "Education")}>
   <ul class="space-y-8 py-3 print:space-y-4">
 
     {
@@ -12,7 +13,7 @@ import { education } from '@cv'
         const end = edu.endDate ? new Date(edu.endDate) : null
 
         const startStr = start ? `${start.getFullYear()}` : ""
-        const endStr = end ? `${end.getFullYear()}` : "Present"
+        const endStr = end ? `${end.getFullYear()}` : t(Astro.currentLocale, "present")
 
         const years = startStr ? `${startStr} – ${endStr}` : ""
         

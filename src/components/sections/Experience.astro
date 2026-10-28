@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro";
-import { work } from "@cv";
+import { cvFor, t } from "@/i18n";
+const { work } = cvFor(Astro.currentLocale);
 import { Icon } from "astro-icon/components";
 
 // ----- Types -----
@@ -20,7 +21,7 @@ type WorkItem = {
 const items: WorkItem[] = work;
 ---
 
-<Section className={Astro.props.className} title="Experience">
+<Section className={Astro.props.className} title={t(Astro.currentLocale, "Experience")}>
   <ul class="flex flex-col">
     {
       items.map((item) => {
@@ -37,7 +38,7 @@ const items: WorkItem[] = work;
           location_type,
         } = item;
 
-        const dateText = `${startDate} – ${endDate ?? "Present"}`;
+        const dateText = `${startDate} – ${endDate ?? t(Astro.currentLocale, "present")}`;
 
         return (
           <li class="relative print:py-2">
@@ -91,7 +92,7 @@ const items: WorkItem[] = work;
                 <!-- Summary -->
                 {summary && (
                   <div class="mt-4 flex flex-col gap-1">
-                    <h4 class="print:font-bold underline underline-offset-4 decoration-skin-hue">Summary</h4>
+                    <h4 class="print:font-bold underline underline-offset-4 decoration-skin-hue">{t(Astro.currentLocale, "Summary")}</h4>
                     <ul class="text-skin-muted list-disc ml-8 flex flex-col gap-2">
                       {Array.isArray(summary) ? (
                         summary.map((s) => <li>{s}</li>)
@@ -107,7 +108,7 @@ const items: WorkItem[] = work;
                   <div
                     class="mt-4 relative flex flex-col gap-4 h-16 overflow-hidden group-data-[expanded=true]:h-auto after:bg-gradient-to-t after:from-skin-hue after:absolute after:bottom-0 after:w-full after:h-12 after:content-[''] group-data-[expanded=true]:after:hidden"
                   >
-                    <h4 class="print:font-bold underline underline-offset-4 decoration-skin-hue">Achievements</h4>
+                    <h4 class="print:font-bold underline underline-offset-4 decoration-skin-hue">{t(Astro.currentLocale, "Achievements")}</h4>
                     <ul class="text-skin-muted list-disc ml-8 flex flex-col gap-2">
                       {achievements.map((r) => (
                         <li>{r}</li>
@@ -120,7 +121,7 @@ const items: WorkItem[] = work;
                   <button
                     class="print:hidden expand-button w-fit flex items-center gap-1.5 text-xs underline text-skin-muted hover:text-skin-inverted transition-all"
                   >
-                    <span class="expand-text">Show more</span>
+                    <span class="expand-text" data-more={t(Astro.currentLocale, "showMore")} data-less={t(Astro.currentLocale, "showLess")}>{t(Astro.currentLocale, "showMore")}</span>
                     <Icon
                       name="ri:arrow-up-s-line"
                       class="w-4 h-4 duration-200 group-data-[expanded=true]:rotate-180"
@@ -162,7 +163,7 @@ const items: WorkItem[] = work;
       const text = btn.querySelector(".expand-text") as HTMLElement | null;
       if (text) {
         text.textContent =
-          container.dataset.expanded === "true" ? "Show less" : "Show more";
+          (container.dataset.expanded === "true" ? text.dataset.less : text.dataset.more) ?? "";
       }
     });
   });

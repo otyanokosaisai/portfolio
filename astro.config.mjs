@@ -21,6 +21,11 @@ export default defineConfig({
 
   output: "static",
 
+  i18n: {
+    locales: ["en", "ja"],
+    defaultLocale: "en",
+  },
+
   // Content Security Policy as a <meta> tag: Astro hashes every inline script,
   // so only the site's own scripts run. Inline styles stay allowed because the
   // markup uses a few style="" attributes (icon colours, background mask).
