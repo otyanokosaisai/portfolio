@@ -20,4 +20,22 @@ export default defineConfig({
   ],
 
   output: "static",
+
+  // Content Security Policy as a <meta> tag: Astro hashes every inline script,
+  // so only the site's own scripts run. Inline styles stay allowed because the
+  // markup uses a few style="" attributes (icon colours, background mask).
+  security: {
+    csp: {
+      directives: [
+        "default-src 'self'",
+        "img-src 'self' data: https://cdn.simpleicons.org",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'self'",
+      ],
+      styleDirective: {
+        resources: ["'self'", "'unsafe-inline'"],
+      },
+    },
+  },
 });
